@@ -1,0 +1,16 @@
+.news-portal {
+  font-size: 1.2rem;
+  border: 2px #5cb0ff solid;
+  padding: 0.8rem 2rem;
+  color: #5cb0ff;
+  transition: all 0.3s ease-out;
+}
+.news-portal:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.news-portal_choosed {
+  border-color: #5cff9b;
+  color: #5cff9b;
+}
