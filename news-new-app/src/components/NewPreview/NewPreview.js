@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { newsEvents } from '../../events/events';
+import { NavLink } from 'react-router-dom';
 
 import './NewPreview.css';
 
@@ -60,7 +61,7 @@ class NewsPreview extends React.PureComponent {
         break;
   
     }
-    // console.log(publishedAt);
+    let linkID = (article.source.id + article.author + article.publishedAt);
 
     return (
         <div className ="new-preview">
@@ -77,7 +78,10 @@ class NewsPreview extends React.PureComponent {
             <h2>{article.title}</h2>
             <div className="new-preview__underline-header"></div>
             <p>{article.description}</p>
-            <span>Read More</span>
+            <NavLink to={"/news-new-app/new/"+linkID} exact lassName="PageLink" activeClassName="ActivePageLink">
+              <span>Read More</span>
+            </NavLink>
+            
           </div>
         </div>
     );

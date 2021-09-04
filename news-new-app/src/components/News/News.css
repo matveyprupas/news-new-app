@@ -4,6 +4,13 @@
 
 .news h1 {
   font-size: 4rem;
+  color: #fefefe;
+  text-decoration: none;
+}
+
+.PageLink,
+.ActivePageLink {
+  text-decoration: none;
 }
 
 .news__subheader {

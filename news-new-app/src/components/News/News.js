@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import NewsPortal from '../NewsPortal';
 import NewPreview from '../NewPreview';
 import urlArray from '../../source/urlArray.json';
+import { NavLink } from 'react-router-dom';
 
 import { newsEvents } from '../../events/events';
 
@@ -74,7 +75,9 @@ class News extends React.PureComponent {
 
     return (
       <div className='news'>
-        <h1>CoolestNews</h1>
+        <NavLink to="/news-new-app" exact className="PageLink" activeClassName="ActivePageLink">
+          <h1>CoolestNews</h1>
+        </NavLink>
         <div className="news__content">
           <div className="news__subheader">
             {this.props.name}

@@ -1,0 +1,12 @@
+.PageLink,
+.ActivePageLink {
+  font-size: 4rem;
+  color: #fefefe;
+  text-decoration: none;
+}
+.PageLink h1,
+.ActivePageLink h1 {
+  font-size: 4rem;
+  color: #fefefe;
+  text-decoration: none;
+}
