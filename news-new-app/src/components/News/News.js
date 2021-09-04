@@ -72,7 +72,6 @@ class News extends React.PureComponent {
     } );
     // console.log(newsPortalsJSX);
 
-
     return (
       <div className='news'>
         <NavLink to="/news-new-app" exact className="PageLink" activeClassName="ActivePageLink">

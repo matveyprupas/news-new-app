@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { newsEvents } from '../../events/events';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './NewPreview.css';
 
@@ -12,6 +12,10 @@ class NewsPreview extends React.PureComponent {
   };
 
   state = {
+  };
+
+  openNew = () => {
+    newsEvents.emit('openNew', this.props.article);
   };
 
 
@@ -78,9 +82,13 @@ class NewsPreview extends React.PureComponent {
             <h2>{article.title}</h2>
             <div className="new-preview__underline-header"></div>
             <p>{article.description}</p>
-            <NavLink to={"/news-new-app/new/"+linkID} exact lassName="PageLink" activeClassName="ActivePageLink">
-              <span>Read More</span>
-            </NavLink>
+            <Link 
+              to={{
+                pathname: "/news-new-app/new/"+linkID, 
+                state: {article: article}
+              }} exact lassName="PageLink" activeClassName="ActivePageLink">
+              <span >Read More</span>
+            </Link>
             
           </div>
         </div>

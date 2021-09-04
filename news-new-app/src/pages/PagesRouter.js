@@ -8,7 +8,7 @@ import Page_Client from './Page_Client';
 class PagesRouter extends React.Component {
           
   render() {
-
+    
     return (
       <div>
         <Route path="/news-new-app" exact component={Page_Home} />
