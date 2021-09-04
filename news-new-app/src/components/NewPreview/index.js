@@ -1,3 +1,3 @@
-import NewsPreview from './NewPrevies';
+import NewPreview from './NewPreview';
 
-export default NewsPreview;
+export default NewPreview;

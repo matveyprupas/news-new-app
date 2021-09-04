@@ -26,11 +26,44 @@
   margin: 2rem 0;
   display: flex;
   align-items: center;
+  overflow: hidden;
+}
+
+.news__slider span {
+  margin: 0 10px;
+}
+
+.news__search form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.news__search input {
+  border: 0;
+  margin-bottom: 3rem;
+}
+
+.news__search input[type="text"] {
+  background-color: #fefefe;
+  width: 60%;
+  padding: 0 1rem;
+}
+
+.news__search input[type="submit"] {
+  background-color: #5cb0ff;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  color: #fefefe;
+  font-weight: 500;
+}
+
+.news__search input[type="submit"]:hover {
+  cursor: pointer;
 }
 
 .news__without-news {
   color: #4b4b4b;
-  margin-top: 100px;
   text-align: center;
 }
 
