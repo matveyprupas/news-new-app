@@ -10,3 +10,35 @@
   color: #fefefe;
   text-decoration: none;
 }
+
+.page-article {
+  background-color: rgb(70, 70, 70);
+  position: relative;
+}
+
+.page-article .page-article__img-wrap {
+  width: 100%;
+  background-color: #333;
+  position: relative;
+  /* z-index: 5; */
+}
+
+.page-article img {
+  width: 100%;
+}
+
+.page-article .page-article__img-wrap h2 {
+  position: absolute;
+  font-size: 2rem;
+  background-color: hsla(0, 0%, 20%, 0.6);
+  margin: 0;
+  padding: 25% 1rem 0;
+  top: 0;
+  bottom: 0;
+}
+
+.page-article__date-source {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}

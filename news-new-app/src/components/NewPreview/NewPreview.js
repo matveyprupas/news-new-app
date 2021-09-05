@@ -63,8 +63,8 @@ class NewsPreview extends React.PureComponent {
       case 12:
         publishedAtMonth = "December";
         break;
-  
     }
+    
     let linkID = (article.source.id + article.author + article.publishedAt);
 
     return (
