@@ -18,7 +18,6 @@
 
 .page-article .page-article__img-wrap {
   width: 100%;
-  background-color: #333;
   position: relative;
   /* z-index: 5; */
 }
@@ -29,6 +28,7 @@
 
 .page-article .page-article__img-wrap h2 {
   position: absolute;
+  width: 100%;
   font-size: 2rem;
   background-color: hsla(0, 0%, 20%, 0.6);
   margin: 0;

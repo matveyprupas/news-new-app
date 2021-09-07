@@ -36,20 +36,22 @@ class News extends React.PureComponent {
   };
   
   setSearchText = (e) => {
-    // console.log(e.target.value);
     this.setState({sortText: e.target.value})
   }
 
   sortNews = (e) => {
     e.preventDefault();
-    let newsSorted = this.state.newsLoaded.articles.filter(el => el.title.toLowerCase().includes(this.state.sortText));
+    if (this.state.newsLoaded) {
+      let newsFiltred = this.state.newsLoaded.articles.filter(el => el.title.toLowerCase().includes(this.state.sortText));
 
-    let stateNewsSorted = newsSorted.map ( (el, i) => {
-      return <NewPreview key = {i} article = {el}></NewPreview>
-    } );
-    this.setState( {
-      articles: stateNewsSorted,
-    });
+      let stateNewsSorted = newsFiltred.map ( (el, i) => {
+        return <NewPreview key = {i} article = {el}></NewPreview>
+      } );
+      this.setState( {
+        articles: stateNewsSorted,
+      });
+    }
+    
   }
 
   componentDidMount = () => {
@@ -85,16 +87,16 @@ class News extends React.PureComponent {
             {newsPortalsJSX}
           </div>
           <div className = "news__search">
-            <form>
-              <input type="text" placeholder="Title" onBlur={this.setSearchText}/>
-              <input type="submit" value="Search" onClick={this.sortNews}/>
+            <form onSubmit = {this.sortNews}>
+              <input type="text" placeholder="Title" onChange={this.setSearchText}/>
+              <input type="submit" value="Submit"/>
             </form>
           </div>
         </div>
         
         {
-        this.state.articles || 
-        <h2 className='news__without-news'>There are no articles matching tour request.</h2>
+        (this.state.articles && (this.state.articles.length && this.state.articles)) ||
+        <h2 className='news__without-news'>There are no articles matching your request.</h2>
         }
         <span className='news__footer'>© Copyright <a href='https://newsapi.org/' target="_blank" rel="noreferrer">News API</a></span>
       </div>
