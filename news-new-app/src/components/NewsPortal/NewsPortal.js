@@ -22,12 +22,20 @@ class NewsPortal extends React.PureComponent {
   showNews = () => {
     var req = new Request(this.props.url);
 
+    newsEvents.emit('newsLoading', {name: "Hello"});
+
     fetch(req)
       .then(function(response) {
+        // throw new Error();
         return response.json();
       })
       .then(function(obj) {
-        newsEvents.emit('newsLoaded', obj);
+        if(!(obj instanceof Error)) {
+          newsEvents.emit('newsLoaded', obj);
+        }
+      })
+      .catch(function(err) {
+        newsEvents.emit('newsLoadingError', err); 
       });
 
     this.props.cbSetChoosedPortalId(this.props.id);

@@ -87,7 +87,7 @@ class NewsPreview extends React.PureComponent {
                 pathname: "/news-new-app/new/"+linkID, 
                 state: {article: article}
               }} exact lassName="PageLink" activeClassName="ActivePageLink">
-              <span >Read More</span>
+              <span>Read More</span>
             </Link>
             
           </div>

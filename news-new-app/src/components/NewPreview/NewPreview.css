@@ -62,7 +62,9 @@
   font-weight: 700;
   font-size: 1.25rem;
 }
-
+.new-preview__text a {
+  text-decoration: none;
+}
 .new-preview__text span:hover,
 .new-preview__text h2:hover {
   cursor: pointer;

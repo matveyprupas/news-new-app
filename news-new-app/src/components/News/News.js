@@ -34,7 +34,42 @@ class News extends React.PureComponent {
       sortText: '',
     });
   };
+
+  showLoadingError = (errorObj) => {
+
+    console.error("Oops, ошибочка :(");
+
+    // <Redirect to="/404" />
+
+    // <NavLink to="/404" exact className="PageLink" activeClassName="ActivePageLink">
+    //   <h1>We're really sorry</h1>
+    // </NavLink>
+    
+    // this.setState( {
+    //   newsLoaded: newsLoaded,
+    //   articles: stateNewsLoaded,
+    //   sortText: '',
+    // });
+  };
   
+  showLoadingSpinner = () => {
+    let spinner = [
+      <div className="spinner-wrap" key="1">
+        <div className="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h2 className='news__without-news'>News are loading... Wait please :)</h2>
+      </div>
+    ];
+
+    this.setState( {
+      articles: spinner,
+    });
+  };
+
   setSearchText = (e) => {
     this.setState({sortText: e.target.value})
   }
@@ -56,10 +91,14 @@ class News extends React.PureComponent {
 
   componentDidMount = () => {
     newsEvents.addListener('newsLoaded', this.showNews);
+    newsEvents.addListener('newsLoadingError', this.showLoadingError);
+    newsEvents.addListener('newsLoading', this.showLoadingSpinner);
   };
 
   componentWillUnmount = () => {
     newsEvents.removeListener('newsLoaded', this.showNews);
+    newsEvents.removeListener('newsLoadingError', this.showLoadingError);
+    newsEvents.removeListener('newsLoading', this.showLoadingSpinner);
   };
 
   setChoosedPortalId = (id) => {
@@ -93,7 +132,6 @@ class News extends React.PureComponent {
             </form>
           </div>
         </div>
-        
         {
         (this.state.articles && (this.state.articles.length && this.state.articles)) ||
         <h2 className='news__without-news'>There are no articles matching your request.</h2>
