@@ -32,7 +32,7 @@ class News extends React.PureComponent {
       newsLoaded: newsLoaded,
       articles: stateNewsLoaded,
       sortText: '',
-    });
+    }, ()=>console.log(this.state.articles));
   };
 
   showLoadingError = (errorObj) => {
@@ -115,7 +115,7 @@ class News extends React.PureComponent {
 
     return (
       <div className='news'>
-        <NavLink to="/news-new-app" exact className="PageLink" activeClassName="ActivePageLink">
+        <NavLink to="/news-new-app" className="PageLink" activeClassName="ActivePageLink">
           <h1>CoolestNews</h1>
         </NavLink>
         <div className="news__content">

@@ -20,7 +20,7 @@ class Page_Client extends React.PureComponent {
   };
 
   openNew = (obj) => {
-    console.log(obj);
+    // console.log(obj);
     // this.setState({});
   };
 
@@ -80,7 +80,7 @@ class Page_Client extends React.PureComponent {
         break;
     }
 
-    console.log(article);
+    // console.log(article);
 
     return (
       <div>
