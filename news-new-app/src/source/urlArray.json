@@ -1,0 +1,39 @@
+{
+    "sources": [
+        {
+            "id": 1,
+            "name": "Apple",
+            "url": "https://newsapi.org/v2/everything?q=Apple&from=2021-08-30&sortBy=popularity&apiKey=71863802a400467a86c161d7ef1ba3ad"
+        },
+        {
+            "id": 2,
+            "name": "Tesla",
+            "url": "https://newsapi.org/v2/everything?q=Tesla&from=2021-08-30&sortBy=popularity&apiKey=71863802a400467a86c161d7ef1ba3ad"
+        },
+        {
+            "id": 3,
+            "name": "Robotics",
+            "url": "https://newsapi.org/v2/everything?q=Robotics&from=2021-08-30&sortBy=popularity&apiKey=71863802a400467a86c161d7ef1ba3ad"
+        },
+        {
+            "id": 4,
+            "name": "NASA",
+            "url": "https://newsapi.org/v2/everything?q=NASA&from=2021-08-30&sortBy=popularity&apiKey=71863802a400467a86c161d7ef1ba3ad"
+        },
+        {
+            "id": 5,
+            "name": "Google",
+            "url": "https://newsapi.org/v2/everything?q=Google&from=2021-08-30&sortBy=popularity&apiKey=71863802a400467a86c161d7ef1ba3ad"
+        },
+        {
+            "id": 6,
+            "name": "Health",
+            "url": "https://newsapi.org/v2/everything?q=Health&from=2021-08-30&sortBy=popularity&apiKey=71863802a400467a86c161d7ef1ba3ad"
+        },
+        {
+            "id": 7,
+            "name": "Games",
+            "url": "https://newsapi.org/v2/everything?q=Games&from=2021-08-30&sortBy=popularity&apiKey=71863802a400467a86c161d7ef1ba3ad"
+        }
+    ]
+}

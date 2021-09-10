@@ -2,6 +2,16 @@
 
 **Deploy** https://matveyprupas.github.io/news-new-app/
 
+**Questions:**
+
+1. news.sortNews() Какой лучше key установить?
+
+2. Как запустить поиск при помощи Enter?
+
+3. Как сделать слайдер из синих прямоугольничков?
+
+4. Как сделать косую линию на превью новости? Нужно ли ее делать?
+
 ## Prerequisites
 
 1. Create a new branch named _news-app_ in **your private RS** Github account and upload your solution.
