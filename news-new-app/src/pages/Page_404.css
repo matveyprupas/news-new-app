@@ -1,0 +1,9 @@
+.page404 h1 {
+  padding: 20% 0;
+}
+
+@media (max-width: 767px) {
+  .page404 h1 {
+    font-size: 1.25rem;
+  }
+}

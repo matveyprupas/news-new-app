@@ -42,3 +42,24 @@
   justify-content: space-between;
   padding: 0 2rem;
 }
+
+@media (max-width: 767px) {
+  .PageLink h1,
+  .ActivePageLink h1,
+  .PageLink h2,
+  .ActivePageLink h2 {
+    font-size: 2rem;
+  }
+
+  .page-article .page-article__img-wrap h2 {
+    width: 100%;
+    font-size: 2rem;
+    padding: 25% 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-article .page-article__img-wrap h2 {
+    font-size: 1.25rem;
+  }
+}

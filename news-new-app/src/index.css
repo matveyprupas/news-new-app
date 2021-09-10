@@ -21,3 +21,9 @@ div#root {
   padding: 0 120px;
   margin: 0 auto;
 }
+
+@media (max-width: 767px) {
+  div#root {
+    padding: 0 10px;
+  }
+}

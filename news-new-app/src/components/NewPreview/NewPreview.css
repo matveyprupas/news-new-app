@@ -69,3 +69,18 @@
 .new-preview__text h2:hover {
   cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+  .new-preview {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-preview__logo {
+    width: 100%;
+  }
+
+  .new-preview__text {
+    width: 90%;
+  }
+}
